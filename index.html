@@ -18,24 +18,24 @@
 
   return t;
 }(document, "script", "twitter-wjs"));</script>
-  <div class="test-timeline"></div>
+  <div id="test-timeline"></div>
   <script>
     twttr.widgets.createTimeline(
-  {
-    sourceType: 'profile',
-    screenName: 'mattwellens'
-  },
-  document.getElementById('test-timeline'),
-  {
-    width: '450',
-    height: '700',
-    tweetLimit: '3',
-    related: 'twitterdev,twitterapi'
-  }).then(function (el) {
-    console.log('Embedded a timeline.')
-  });
-  </script.
-  <a class="twitter-timeline" href="https://twitter.com/mattwellens?ref_src=twsrc%5Etfw" data-tweet-limit="3">Tweets by mattwellens</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      {
+        sourceType: 'profile',
+        screenName: 'mattwellens'
+      },
+      document.getElementById('test-timeline'),
+      {
+        width: '450',
+        height: '700',
+        tweetLimit: '3',
+        related: 'twitterdev,twitterapi'
+      }).then(function (el) {
+        console.log('Embedded a timeline.')
+      });
+  </script>
+  <!-- <a class="twitter-timeline" href="https://twitter.com/mattwellens?ref_src=twsrc%5Etfw" data-tweet-limit="3">Tweets by mattwellens</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
 </body>
 </html>
 
