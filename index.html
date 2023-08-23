@@ -2,6 +2,39 @@
 <html>
 <body> 
 <!-- <script src="https://jdowie.shorthandstories.com/advertisement-embed/embed.js"></script> -->
+  <script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+  <div class="test-timeline"></div>
+  <script>
+    twttr.widgets.createTimeline(
+  {
+    sourceType: 'profile',
+    screenName: 'mattwellens'
+  },
+  document.getElementById('test-timeline'),
+  {
+    width: '450',
+    height: '700',
+    tweetLimit: '3',
+    related: 'twitterdev,twitterapi'
+  }).then(function (el) {
+    console.log('Embedded a timeline.')
+  });
+  </script.
   <a class="twitter-timeline" href="https://twitter.com/mattwellens?ref_src=twsrc%5Etfw" data-tweet-limit="3">Tweets by mattwellens</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>
 </html>
