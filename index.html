@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script>window.twttr = (function(d, s, id) {
+<body> 
+<!-- <script src="https://jdowie.shorthandstories.com/advertisement-embed/embed.js"></script> -->
+    <div id="test-timeline"></div>
+  <script>
+    window.twttr = (function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0],
         t = window.twttr || {};
       if (d.getElementById(id)) return t;
@@ -16,13 +19,7 @@
       };
     
       return t;
-    }(document, "script", "twitter-wjs"));</script>
-    
-  </head>
-<body> 
-<!-- <script src="https://jdowie.shorthandstories.com/advertisement-embed/embed.js"></script> -->
-    <div id="test-timeline"></div>
-  <script>
+    }(document, "script", "twitter-wjs"));
     twttr.widgets.createTimeline(
       {
         sourceType: 'profile',
@@ -31,7 +28,8 @@
       document.getElementById('test-timeline'),
       {
         width: '450',
-        height: '700'
+        height: '700',
+        tweetLimit: 3
       }).then(function (el) {
         console.log('Embedded a timeline.')
       });
